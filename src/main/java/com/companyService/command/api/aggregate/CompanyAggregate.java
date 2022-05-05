@@ -24,6 +24,8 @@ public class CompanyAggregate {
 	private BigDecimal turnOver;
 	private String website;
 	private String enlistedStockMarkets;
+	
+	
 
 	public CompanyAggregate() {
 		
