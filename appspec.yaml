@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:402320383251:task-definition/company-service-task-definition:1"
+        LoadBalancerInfo:
+          ContainerName: "company-service-container"
+          ContainerPort: "8081"
+        PlatformVersion: "LATEST"

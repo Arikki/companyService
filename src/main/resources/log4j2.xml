@@ -2,13 +2,13 @@
 <Configuration status="info" name="spring-boot-kafka-log"
 	packages="com.companyService">
 	<Appenders>
-	   	<Kafka name="Kafka" topic="companysvc">
+	<!--    	<Kafka name="Kafka" topic="companysvc">
 			<PatternLayout pattern="%date %message" />
 			<Property name="bootstrap.servers">localhost:9092</Property>
 		</Kafka>
 		<Async name="Async">
 			<AppenderRef ref="Kafka" />
-		</Async>  
+		</Async>  --> 
 
 		<Console name="stdout" target="SYSTEM_OUT">
 			<PatternLayout
@@ -18,7 +18,7 @@
 	</Appenders>
 	<Loggers>
 		<Root level="INFO">
-		    <AppenderRef ref="Kafka" /> 
+		<!--      <AppenderRef ref="Kafka" /> -->
 			<AppenderRef ref="stdout" />
 		</Root>
 		    <Logger name="org.apache.kafka" level="WARN" />

@@ -15,9 +15,29 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import com.companyService.filter.ReqFilter;
 
 @Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private ReqFilter filter;
+	
+	@Bean
+	public WebMvcConfigurer getCorsConfiguration() {
+		return new WebMvcConfigurer(
+				) {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				// TODO Auto-generated method stub
+//				WebMvcConfigurer.super.addCorsMappings(registry);
+				registry.addMapping("/**")
+						.allowedOrigins("*")
+						.allowedMethods("*")
+						.allowedHeaders("*");
+			}
+		};
+		
+	}
+	
 
 	@Override
 	public void configure(HttpSecurity http) throws Exception {

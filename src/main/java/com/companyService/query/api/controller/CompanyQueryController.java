@@ -50,7 +50,7 @@ public class CompanyQueryController {
 	
 	@GetMapping("getall")
 	@Operation(summary = "Fetches all the companies details with latest stock price")
-	@CrossOrigin("http://localhost:4200")
+	@CrossOrigin("http://localhost:8080")
 	public List<CompanyReadModel> getAllCompanies() throws InterruptedException, ExecutionException{
 		GetCompaniesQuery getCompaniesQuery = new GetCompaniesQuery();
 		
