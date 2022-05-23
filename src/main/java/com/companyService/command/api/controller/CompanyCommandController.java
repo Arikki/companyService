@@ -38,7 +38,8 @@ public CompanyCommandController(CommandGateway commandGateway) {
 }
 
 	@PostMapping("register")
-	@Operation(summary = "Register a new company", security = @SecurityRequirement(name = "bearerAuth"))
+//	@Operation(summary = "Register a new company", security = @SecurityRequirement(name = "bearerAuth"))
+	@Operation(summary = "Register a new company")
 	public String registerProfile(@Valid @RequestBody CompanyWriteModel company) {
 		
 		logger.info("Request to add company" + company.toString());
