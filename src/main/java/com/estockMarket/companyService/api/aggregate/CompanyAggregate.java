@@ -40,6 +40,7 @@ public class CompanyAggregate {
 										.companyName(cmd.getCompanyName())
 										.enlistedStockMarkets(cmd.getEnlistedStockMarkets())
 										.turnOver(cmd.getTurnOver())
+										.website(cmd.getWebsite())
 										.uuid(cmd.getUuid())
 										.build();
 		
@@ -64,6 +65,7 @@ public class CompanyAggregate {
 		this.companyName  = event.getCompanyName();
 		this.enlistedStockMarkets = event.getEnlistedStockMarkets();
 		this.turnOver = event.getTurnOver();
+		this.website = event.getWebsite();
 		this.uuid = event.getUuid();
 	}
 	

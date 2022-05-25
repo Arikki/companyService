@@ -45,6 +45,7 @@ public class CompanyCommandController {
 								.companyName(request.getCompanyName())
 								.enlistedStockMarkets(request.getEnlistedStockMarkets())
 								.turnOver(request.getTurnOver())
+								.website(request.getWebsite())
 								.uuid(UUID.randomUUID().toString())
 								.build();
 		String result = commandGateway.sendAndWait(cmd);

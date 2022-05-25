@@ -37,6 +37,7 @@ public class CompanyEventsHandler {
 						.companyName(event.getCompanyName())
 						.enlistedStockMarkets(event.getEnlistedStockMarkets())
 						.turnOver(event.getTurnOver())
+						.website(event.getWebsite())
 						.build();
 		
 		repo.save(company);
